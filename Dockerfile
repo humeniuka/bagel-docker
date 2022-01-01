@@ -101,5 +101,5 @@ WORKDIR /
 ENTRYPOINT ["BAGEL"]
 CMD ["input.json"]
 
-LABEL description="BAGEL electronic structure package (see https://github.com/qsimulate-open/CMD )"
+LABEL description="BAGEL electronic structure package (see https://github.com/qsimulate-open/bagel )"
 
