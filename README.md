@@ -96,7 +96,22 @@ cd examples/casscf
      -a bagel-engine
   ~~~
 
-  The output should 
+  The output should contain among other things the final energy and the CI vector:
+
+  ~~~
+      === FCI iteration ===
+
+      ...
+      9  0 *     -76.00368392     1.54e-11      0.00
+
+     * ci vector, state   0, <S^2> = 0.0000
+       222..    -0.9910860804
+       2.22.     0.0666853638
+       22..2     0.0663562253
+       2baab    -0.0500191282
+       2abba    -0.0500191282
+
+  ~~~
 
 4) The CASSCF orbitals were written to the file '/orbitals.molden'.
   If we are interested in this file, we have to copy it back before
