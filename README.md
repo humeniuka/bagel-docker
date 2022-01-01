@@ -28,6 +28,12 @@ docker run --entrypoint /bin/bash --rm -it quack-quack/bagel:latest
 Example
 -------
 The following steps run a CASSCF/svp calculation on the water molecule.
+The JSON input file and a bash script for running all steps can be found in `examples/casscf`.
+
+~~~bash
+cd examples/casscf
+~~~
+
 `h2o_svg_cas.json` contains the geometry and the details of the calculation:
 
 ~~~json
@@ -67,13 +73,13 @@ The following steps run a CASSCF/svp calculation on the water molecule.
 
 1) Create a container named `bagel-engine` with required resources.
 
-~~~bash
-docker container create \
+  ~~~bash
+  docker container create \
     --name bagel-engine \
     --mount type=tmpfs,destination=/scratch \
     --cpus 2 --memory 6Gb \
       quack-quack/bagel:latest
-~~~
+  ~~~
 
 2) Copy the input script describing the calculation to the container.
 
