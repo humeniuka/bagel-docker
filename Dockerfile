@@ -93,3 +93,13 @@ ENV LD_LIBRARY_PATH=/usr/local/lib/bagel
 # tests
 COPY tests/* /tests/
 
+# The json input script should have been copied into /input.json
+# and the /scratch folder should have been mounted as a temporary file system.
+RUN mkdir -p /scratch
+
+WORKDIR /
+ENTRYPOINT ["BAGEL"]
+CMD ["input.json"]
+
+LABEL description="BAGEL electronic structure package (see https://github.com/qsimulate-open/CMD )"
+
